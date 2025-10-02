@@ -31,7 +31,7 @@ jobs:
 
 
       - name: Deploy via SFTP
-        uuses: appleboy/scp-action@v0.1.7
+        uses: appleboy/scp-action@v0.1.7
         with:
           server: 193.40.62.28
           username: ${{ secrets.CPANEL_USER }}
