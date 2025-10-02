@@ -38,6 +38,6 @@ jobs:
           username: ${{ secrets.CPANEL_USER }}
           password: ${{ secrets.CPANEL_PASS }}
           source: "dist/**"
-          target: "public_html/${{ github.ref_name == 'main' && '' || github.ref_name }}"
+          target: ${{ github.ref_name == 'main' && 'public_html/' || format('public_html/{0}/', github.ref_name) }}
           rm: true
           strip_components: 1
