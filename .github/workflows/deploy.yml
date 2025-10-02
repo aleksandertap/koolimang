@@ -29,6 +29,17 @@ jobs:
           fi
           npm run build
 
+      - name: Clean old main build
+        if: github.ref_name == 'main'
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: 193.40.62.28
+          port: 22
+          username: ${{ secrets.CPANEL_USER }}
+          password: ${{ secrets.CPANEL_PASS }}
+          script: |
+            cd ~/public_html
+            rm -rf assets index.html vite.svg
 
       - name: Deploy via SFTP
         uses: appleboy/scp-action@v0.1.7
@@ -39,5 +50,5 @@ jobs:
           password: ${{ secrets.CPANEL_PASS }}
           source: "dist/**"
           target: ${{ github.ref_name == 'main' && 'public_html/' || format('public_html/{0}/', github.ref_name) }}
-          rm: true
           strip_components: 1
+          rm: ${{ github.ref_name != 'main' }}
