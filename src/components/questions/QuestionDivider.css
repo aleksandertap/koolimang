@@ -1,12 +1,21 @@
-.container{
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
+.containerDivider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
 }
-hr{
-    border: 1px;
-    border-color: black;
+
+.containerDivider hr {
+  flex-grow: 1;
+  border: none;
+  border-top: 1px solid black;
+  margin: 0 5px;
 }
-p{
-    font-size: 2rem;
+
+.containerDivider p {
+  font-weight: bold;
+  color: black;
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
 }
