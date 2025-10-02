@@ -37,5 +37,6 @@ jobs:
           port: 22
           username: ${{ secrets.CPANEL_USER }}
           password: ${{ secrets.CPANEL_PASS }}
-          source: "dist/*"
+          source: "dist/**"
           target: "public_html/${{ github.ref_name == 'main' && '' || github.ref_name }}"
+          rm: true
