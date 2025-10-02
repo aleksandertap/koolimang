@@ -30,12 +30,11 @@ jobs:
           npm run build
 
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
+      - name: Deploy via SFTP
+        uuses: appleboy/scp-action@v0.1.7
         with:
           server: 193.40.62.28
           username: ${{ secrets.CPANEL_USER }}
           password: ${{ secrets.CPANEL_PASS }}
-          server-dir: |
-            ${{ github.ref_name == 'main' && 'public_html/' || format('public_html/{0}/', github.ref_name) }}
-          local-dir: dist/
+          source: "dist/*"
+          target: "public_html/${{ github.ref_name == 'main' && '' || github.ref_name }}"
