@@ -3,7 +3,7 @@ import "./QuestionDivider.css"
 
 const QuestionDivider = () => {
   return (
-    <div className='container'>
+    <div className='containerDivider'>
         <hr />
         <p>VS</p>
         <hr />
