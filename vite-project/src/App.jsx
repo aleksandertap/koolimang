@@ -4,6 +4,8 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import { getData } from './data/data'
 import MainMenu from './components/menus/MainMenu'
+import QuestionDivider from './components/questions/QuestionDivider'
+import Table from './components/questions/Table'
 
 function App() {
   const data = getData()
@@ -11,6 +13,7 @@ function App() {
   return (
     <>
       <MainMenu></MainMenu>
+      <Table/>
     </>
   )
 }

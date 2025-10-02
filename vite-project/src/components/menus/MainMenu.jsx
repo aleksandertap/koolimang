@@ -6,8 +6,8 @@ const MainMenu = () => {
     
   return (
     <div className='container'>
-        <h1 className='title'>HEllo</h1>
-        <p className='text'>text</p>
+        <h1 className='title'>PEALKIRI</h1>
+        <p className='text'>Vali väide, mis käib sinu kohta</p>
         <Button className="button" text={"yes"} onClick={() => console.log("hell")}/> 
     </div>
   )
