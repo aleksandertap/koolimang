@@ -40,3 +40,4 @@ jobs:
           source: "dist/**"
           target: "public_html/${{ github.ref_name == 'main' && '' || github.ref_name }}"
           rm: true
+          strip_components: 1
