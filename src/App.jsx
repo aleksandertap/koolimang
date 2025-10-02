@@ -13,7 +13,6 @@ function App() {
   return (
     <>
       <MainMenu></MainMenu>
-      <Table/>
     </>
   )
 }
