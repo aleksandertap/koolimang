@@ -3,43 +3,57 @@ const data = [
     id: 1,
     name: "Ehituskool",
     description: "",
-    erialad: [{ icon: "", title: "", value: "" }],
+    icon: "../assets/img/icons/brush.png",
+    picture: "pathToPicture",
+    suggestion:[]
   },
   {
     id: 2,
     name: "Turismikool",
-    description:"",
-    eriala: [{ icon: "", title: "", value: "" }],
+    description: "",
+    icon: "pathToIcon",
+    picture: "pathToPicture",
+    suggestion:[]
   },
   {
     id: 3,
     name: "Toidukool",
-    description:"",
-    eriala: [{ icon: "", title: "", value: "" }],
+    description: "",
+    icon: "pathToIcon",
+    picture: "pathToPicture",
+    suggestion:[]
   },
   {
     id: 4,
     name: "Ärikool",
     description: "",
-    eriala: [{ icon: "", title: "", value: "" }],
+    icon: "pathToIcon",
+    picture: "pathToPicture",
+    suggestion:[]
   },
   {
     id: 5,
     name: "Ilukool",
     description: "",
-    eriala: [{ icon: "", title: "", value: "" }],
+    icon: "pathToIcon",
+    picture: "pathToPicture",
+    suggestion:[]
   },
   {
     id: 6,
     name: "Tehnikakool",
-    description:"",
-    eriala: [{ icon: "", title: "", value: "" }],
+    description: "",
+    icon: "pathToIcon",
+    picture: "pathToPicture",
+    suggestion:[]
   },
   {
     id: 7,
     name: "IT-Kool",
-    description:"",
-    eriala: [{ icon: "", title: "", value: "" }],
+    description: "",
+    icon: "pathToIcon",
+    picture: "pathToPicture",
+    suggestion:[]
   },
 ];
 
