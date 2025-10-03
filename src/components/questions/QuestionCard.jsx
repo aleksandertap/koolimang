@@ -1,12 +1,15 @@
 import React from 'react'
 import "./QuestionCard.css"
+import Button from '../Button'
+import { useState } from 'react'
+
 
 const QuestionCard = (props) => {
-    const {text} = props
+    const {text, onClick} = props
 
   return (
     <div className='cardContainer'>
-        <p>{text}</p>
+        <Button text={text} onClick={onClick}/>
     </div>
   )
 }

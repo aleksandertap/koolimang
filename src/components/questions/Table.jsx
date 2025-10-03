@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import QuestionCard from './QuestionCard'
 import QuestionDivider from './QuestionDivider'
 import "./Table.css"
+import { getData } from '../../data/data'
 
 const Table = () => {
+  
+
   return (
     <div className='table'>
-        <QuestionCard text={"this is card 1 text"}/>
+        <QuestionCard />
         <QuestionDivider/>
-        <QuestionCard text={"this is card 2 text"}/>
+        <QuestionCard />
     </div>
   )
 }

@@ -8,9 +8,11 @@ function App() {
   const data = getData()
 
   return (
-    <>
-      <MainMenu></MainMenu>
-    </>
+    
+      <div className='mainContainer'>
+        <Table></Table>
+      </div>
+    
   )
 }
 
