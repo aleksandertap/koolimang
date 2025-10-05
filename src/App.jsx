@@ -35,7 +35,7 @@ function App() {
     {!showHistory && (
       <div className="history-icon-container">
         <img className="history-icon"
-          src="src/assets/img/icons/ajalugu.png" 
+          src="/img/icons/ajalugu.png" 
           alt="History Icon"
           height={65} 
           onClick={() => setShowHistory(true)} 
