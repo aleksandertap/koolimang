@@ -1,0 +1,33 @@
+import React, { useEffect, useState } from "react";
+import "./LoadingScreen.css";
+
+const images = [
+  "/loadingscreen/1.svg",
+  "/loadingscreen/2.svg",
+  "/loadingscreen/3.svg",
+  "/loadingscreen/4.svg",
+  "/loadingscreen/5.svg",
+  "/loadingscreen/6.svg",
+];
+
+const LoadingScreen = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % images.length);
+    }, 2200); 
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="loading-container">
+      <div className="loading-screen">
+        <img src={images[current]} alt={`Loading ${current + 1}`} className="loading-image" />
+      </div>
+      <p>Vastuse arvutamine...</p>
+    </div>
+  );
+};
+
+export default LoadingScreen;
