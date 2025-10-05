@@ -25,7 +25,6 @@ const Table = ({ data, onComplete, onProgress }) => {
     setNextRound((prev) => [...prev, selected]);
     setRoundData(updatedRound);
 
-    setSuggestionIndex((prev) => prev + 1); // jälgib kaarte
     setProgressCounter((prev) => prev + 1); // jälgib progressbar'i
   };
 
@@ -40,7 +39,7 @@ const Table = ({ data, onComplete, onProgress }) => {
 
       setRoundData(nextRound);
       setNextRound([]);
-      setSuggestionIndex(0);
+      setSuggestionIndex((prev) => prev + 1); // jälgib kaarte
     }
   }, [roundData, nextRound, onComplete]);
   useEffect(() => {
