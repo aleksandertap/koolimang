@@ -4,7 +4,7 @@ const data = [
     name: "Ehituskool",
     description: "",
     icon: "../assets/img/icons/ehituskool.png",
-    picture: "pathToPicture",
+    picture: "../assets/img/pictures/ehituskool.png",
     suggestion: [
       "Olen kannatlik, täpne ja naudin, kui saan oma kätega midagi nullist üles ehitada.", 
       "Mind huvitab hoonete, ruumide, konstruktsioonide ja mööbli loomine ja taastamine.",
@@ -16,7 +16,7 @@ const data = [
     name: "IT-Kool",
     description: "",
     icon: "../assets/img/icons/itkool.png",
-    picture: "pathToPicture",
+    picture: "../assets/img/pictures/itkool.png",
     suggestion: [
       "Olen analüütiline, uudishimulik ja naudin, kui saan keerulisi probleeme lahendada.",
       "Mind huvitab programmeerimine, süsteemide töö ja digimaailma kujundamine.",
@@ -28,7 +28,7 @@ const data = [
     name: "Toidukool",
     description: "",
     icon: "../assets/img/icons/toidukool.png",
-    picture: "pathToPicture",
+    picture: "../assets/img/pictures/toidukool.png",
     suggestion: [
       "Olen hoolikas ja tähelepanelik, mulle meeldib pakkuda inimestele meeldivaid elamusi läbi toidu ja teeninduse.",
       "Mind huvitab nii toidu valmistamine kui ka selle serveerimine ja külalislahke teenindus.",
@@ -40,7 +40,7 @@ const data = [
     name: "Ärikool",
     description: "",
     icon: "../assets/img/icons/arikool.png",
-    picture: "pathToPicture",
+    picture: "../assets/img/pictures/arikool.png",
     suggestion: [
       "Olen organiseeritud, süsteemne ja naudin, kui saan protsesse sujuvamaks muuta.",
       "Mind huvitab ettevõtete toimimine, töö korraldamine ja inimeste juhtimine.",
@@ -52,7 +52,7 @@ const data = [
     name: "Ilukool",
     description: "",
     icon: "../assets/img/icons/ilukool.png",
-    picture: "pathToPicture",
+    picture: "../assets/img/pictures/ilukool.png",
     suggestion: [
       "Olen loominguline ja väärtustan ilu ning täpsust väikestes detailides.",
       "Mind huvitab inimeste välimuse, heaolu ja enesekindluse kujundamine.",
@@ -64,7 +64,7 @@ const data = [
     name: "Tehnikakool",
     description: "",
     icon: "../assets/img/icons/tehnikakool.png",
-    picture: "pathToPicture",
+    picture: "../assets/img/pictures/tehnikakool.png",
     suggestion: [
       "Olen loogilise mõtlemisega, täpne ja praktiline ning naudin olukordi, kus saan lahendada tehnilisi ülesandeid ja näidata enda käelist osavust.",
       "Mind huvitab, kuidas masinaid, seadmeid ja süsteeme nii luua, paremaks muuta kui ka hooldada.",
@@ -77,7 +77,7 @@ const data = [
     name: "Turismikool",
     description: "",
     icon: "../assets/img/icons/turismikool.png",
-    picture: "pathToPicture",
+    picture: "../assets/img/pictures/turismikool.png",
     suggestion: [
       "Olen avatud ja rõõmsameelne, naudin suhtlemist väga erinevate inimestega.",
       "Mind huvitab puhtuse, korra ja hubasuse loomine, et inimestel oleks meeldiv viibida erinevates keskkondades.",
@@ -89,7 +89,7 @@ const data = [
     name: "Oh ei! Me ei leidnud sulle sobivat osakonda!",
     description: "",
     icon: null,
-    picture: "pathToPicture",
+    picture: "../assets/img/pictures/pole_valdkonda.png",
     suggestion: [
       "Olen pigem teoreetilise meelega ja eelistan akadeemilisi aineid praktilistele oskustele.", 
       "Mind köidavad teemad, mis eeldavad rohkem teoreetilist süvenemist kui praktilist tegutsemist.",
