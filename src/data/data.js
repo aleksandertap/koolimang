@@ -3,7 +3,7 @@ const data = [
     id: 1,
     name: "Ehituskool",
     description: "",
-    icon: "../assets/img/icons/brush.png",
+    icon: "../assets/img/icons/ehituskool.png",
     picture: "pathToPicture",
     suggestion: [
       "Olen kannatlik, täpne ja naudin, kui saan oma kätega midagi nullist üles ehitada.", 
@@ -15,7 +15,7 @@ const data = [
     id: 2,
     name: "IT-Kool",
     description: "",
-    icon: "pathToIcon",
+    icon: "../assets/img/icons/itkool.png",
     picture: "pathToPicture",
     suggestion: [
       "Olen analüütiline, uudishimulik ja naudin, kui saan keerulisi probleeme lahendada.",
@@ -27,7 +27,7 @@ const data = [
     id: 3,
     name: "Toidukool",
     description: "",
-    icon: "pathToIcon",
+    icon: "../assets/img/icons/toidukool.png",
     picture: "pathToPicture",
     suggestion: [
       "Olen hoolikas ja tähelepanelik, mulle meeldib pakkuda inimestele meeldivaid elamusi läbi toidu ja teeninduse.",
@@ -39,7 +39,7 @@ const data = [
     id: 4,
     name: "Ärikool",
     description: "",
-    icon: "pathToIcon",
+    icon: "../assets/img/icons/arikool.png",
     picture: "pathToPicture",
     suggestion: [
       "Olen organiseeritud, süsteemne ja naudin, kui saan protsesse sujuvamaks muuta.",
@@ -51,7 +51,7 @@ const data = [
     id: 5,
     name: "Ilukool",
     description: "",
-    icon: "pathToIcon",
+    icon: "../assets/img/icons/ilukool.png",
     picture: "pathToPicture",
     suggestion: [
       "Olen loominguline ja väärtustan ilu ning täpsust väikestes detailides.",
@@ -63,7 +63,7 @@ const data = [
     id: 6,
     name: "Tehnikakool",
     description: "",
-    icon: "pathToIcon",
+    icon: "../assets/img/icons/tehnikakool.png",
     picture: "pathToPicture",
     suggestion: [
       "Olen loogilise mõtlemisega, täpne ja praktiline ning naudin olukordi, kus saan lahendada tehnilisi ülesandeid ja näidata enda käelist osavust.",
@@ -76,7 +76,7 @@ const data = [
     id: 7,
     name: "Turismikool",
     description: "",
-    icon: "pathToIcon",
+    icon: "../assets/img/icons/turismikool.png",
     picture: "pathToPicture",
     suggestion: [
       "Olen avatud ja rõõmsameelne, naudin suhtlemist väga erinevate inimestega.",
@@ -86,9 +86,9 @@ const data = [
   },
   {
     id: 8,
-    name: "VOCO EI SOBI SULLE",
+    name: "Oh ei! Me ei leidnud sulle sobivat osakonda!",
     description: "",
-    icon: "pathToIcon",
+    icon: null,
     picture: "pathToPicture",
     suggestion: [
       "Olen pigem teoreetilise meelega ja eelistan akadeemilisi aineid praktilistele oskustele.", 
