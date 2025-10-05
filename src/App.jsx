@@ -5,12 +5,15 @@ import Table from "./components/questions/Table";
 import { useState } from "react";
 import Result from "./components/questions/Result";
 import ProgressBar from "./components/questions/ProgressBar";
+import History from "./components/menus/History";
+import { createPortal } from "react-dom";
 
 function App() {
   const [howFar, setHowFar] = useState("mainMenu");
   const [data, setData] = useState(getData());
   const [winner, setWinner] = useState(null);
   const [progress, setProgress] = useState(0);
+  const [showHistory, setShowHistory] = useState(false);
 
   const startQuiz = () => {
     setHowFar("questions");
@@ -28,6 +31,23 @@ function App() {
 
   return (
     <div className="mainContainer">
+      <div>
+    {!showHistory && (
+      <div className="history-icon-container">
+        <img className="history-icon"
+          src="src/assets/img/icons/ajalugu.png" 
+          alt="History Icon"
+          height={65} 
+          onClick={() => setShowHistory(true)} 
+        />
+      </div>
+    )}
+
+    {showHistory && createPortal(
+      <History onClose={() => setShowHistory(false)} />,
+      document.body
+    )}
+  </div>
       {howFar === "mainMenu" && <MainMenu startQuiz={startQuiz} />}
 
       {howFar === "questions" && (

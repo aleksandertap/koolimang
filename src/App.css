@@ -11,3 +11,15 @@
   height: 100%;   
   flex-direction: column;
 }
+.history-icon-container{
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  cursor: pointer;
+  /* bg-c alles siis kui on teada kuhu asi maandub
+  background-color: white; */
+  
+}
+/* .history-icon{
+  
+} */
