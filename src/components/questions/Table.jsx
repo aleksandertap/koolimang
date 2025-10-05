@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import QuestionCard from './QuestionCard'
-import QuestionDivider from './QuestionDivider'
-import "./Table.css"
+import React, { useEffect, useState } from "react";
+import QuestionCard from "./QuestionCard";
+import QuestionDivider from "./QuestionDivider";
+import "./Table.css";
 
 const shuffleData = (data) => {
   let shuffled = [...data];
@@ -12,39 +12,44 @@ const shuffleData = (data) => {
   return shuffled;
 };
 
-const Table = ({data, onComplete}) => {
+const Table = ({ data, onComplete, onProgress }) => {
   const [roundData, setRoundData] = useState(shuffleData(data));
   const [nextRound, setNextRound] = useState([]);
   const [suggestionIndex, setSuggestionIndex] = useState(0);
+  const [progressCounter, setProgressCounter] = useState(0);
   const [winner, setWinner] = useState(null);
-
 
   const handleSelect = (selectedIdx) => {
     const selected = roundData[selectedIdx];
-    const updatedRound = roundData.slice(2); 
-    setNextRound(prev => [...prev, selected]);
+    const updatedRound = roundData.slice(2);
+    setNextRound((prev) => [...prev, selected]);
     setRoundData(updatedRound);
-  };
 
- 
+    setSuggestionIndex((prev) => prev + 1); // jälgib kaarte
+    setProgressCounter((prev) => prev + 1); // jälgib progressbar'i
+  };
 
   useEffect(() => {
     if (roundData.length === 0 && nextRound.length > 0) {
-
       if (nextRound.length === 1) {
         setWinner(nextRound[0]);
-        if (onComplete) {
-            onComplete(nextRound[0]);
-        }
+        if (onComplete) onComplete(nextRound[0]);
+
         return;
       }
 
-      setRoundData(nextRound); 
-      setNextRound([]); 
-
-      setSuggestionIndex(prev => prev + 1);
+      setRoundData(nextRound);
+      setNextRound([]);
+      setSuggestionIndex(0);
     }
-  }, [roundData, nextRound, onComplete]); 
+  }, [roundData, nextRound, onComplete]);
+  useEffect(() => {
+    if (onProgress) {
+      const totalRounds = data.length - 1;
+      const progressValue = Math.round((progressCounter / totalRounds) * 100);
+      onProgress(progressValue);
+    }
+  }, [progressCounter, data, onProgress]);
 
   //selleta ei lae andmeid sisse
   if (roundData.length < 2) {
@@ -57,12 +62,20 @@ const Table = ({data, onComplete}) => {
   return (
     <div className="table">
       <QuestionCard
-        text={option1.suggestion[suggestionIndex]}
+        text={
+          option1.suggestion[
+            Math.min(suggestionIndex, option1.suggestion.length - 1)
+          ]
+        }
         onClick={() => handleSelect(0)}
       />
       <QuestionDivider />
       <QuestionCard
-        text={option2.suggestion[suggestionIndex]}
+        text={
+          option2.suggestion[
+            Math.min(suggestionIndex, option2.suggestion.length - 1)
+          ]
+        }
         onClick={() => handleSelect(1)}
       />
     </div>
