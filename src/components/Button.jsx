@@ -3,9 +3,9 @@ import "./Button.css"
 
 const Button = (props) => {
 
-const {text, onClick} = props
+const {text, onClick, className} = props
   return (
-    <button onClick={onClick}>
+    <button onClick={onClick} className={className}>
         {text}
     </button>
   )
