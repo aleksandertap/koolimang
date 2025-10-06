@@ -28,6 +28,23 @@ function App() {
   const completeQuiz = (finalWinner) => {
     setWinner(finalWinner);
     setHowFar("results");
+
+      // Salvestab localStoragesse 
+  const prev = JSON.parse(localStorage.getItem("history")) || [];
+
+  // Format date as dd.mm.yyyy
+  const now = new Date();
+  const date = now.toLocaleDateString("et-EE");
+
+  const entry = {
+    id: finalWinner.id,
+    name: finalWinner.name,
+    icon: finalWinner.icon,
+    date,
+  };
+
+  const updated = [entry, ...prev]; // pea-alaspidi järjekord
+  localStorage.setItem("history", JSON.stringify(updated));
   };
 
   return (
