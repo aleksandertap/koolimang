@@ -7,6 +7,8 @@ import Result from "./components/questions/Result";
 import ProgressBar from "./components/questions/ProgressBar";
 import History from "./components/menus/History";
 import { createPortal } from "react-dom";
+import historyIcon from "./assets/img/svg/ajalugu.svg";
+import IconsBar from "./components/IconsBar";
 
 function App() {
   const [howFar, setHowFar] = useState("mainMenu");
@@ -27,6 +29,23 @@ function App() {
   const completeQuiz = (finalWinner) => {
     setWinner(finalWinner);
     setHowFar("results");
+
+      // Salvestab localStoragesse 
+  const prev = JSON.parse(localStorage.getItem("history")) || [];
+
+  // Format date as dd.mm.yyyy
+  const now = new Date();
+  const date = now.toLocaleDateString("et-EE");
+
+  const entry = {
+    id: finalWinner.id,
+    name: finalWinner.name,
+    icon: finalWinner.icon,
+    date,
+  };
+
+  const updated = [entry, ...prev]; // pea-alaspidi järjekord
+  localStorage.setItem("history", JSON.stringify(updated));
   };
 
   return (
@@ -35,7 +54,7 @@ function App() {
     {!showHistory && (
       <div className="history-icon-container">
         <img className="history-icon"
-          src="/img/icons/ajalugu.png" 
+          src={historyIcon} 
           alt="History Icon"
           height={65} 
           onClick={() => setShowHistory(true)} 
@@ -54,6 +73,7 @@ function App() {
         <>
           <ProgressBar progress={progress} />
           <Table data={data} onComplete={completeQuiz} onProgress={setProgress} />
+          <IconsBar />
         </>
 )}
 
