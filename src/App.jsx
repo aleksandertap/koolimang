@@ -8,6 +8,7 @@ import ProgressBar from "./components/questions/ProgressBar";
 import History from "./components/menus/History";
 import { createPortal } from "react-dom";
 import historyIcon from "./assets/img/svg/ajalugu.svg";
+import IconsBar from "./components/IconsBar";
 
 function App() {
   const [howFar, setHowFar] = useState("mainMenu");
@@ -55,6 +56,7 @@ function App() {
         <>
           <ProgressBar progress={progress} />
           <Table data={data} onComplete={completeQuiz} onProgress={setProgress} />
+          <IconsBar />
         </>
 )}
 
