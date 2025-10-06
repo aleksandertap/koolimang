@@ -5,7 +5,7 @@ const QuestionDivider = () => {
   return (
     <div className='containerDivider'>
         <hr />
-        <p>VS</p>
+        <p className='vsText'>VS</p>
         <hr />
     </div>
   )
