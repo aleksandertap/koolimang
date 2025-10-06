@@ -7,6 +7,7 @@ import Result from "./components/questions/Result";
 import ProgressBar from "./components/questions/ProgressBar";
 import History from "./components/menus/History";
 import { createPortal } from "react-dom";
+import historyIcon from "./assets/img/svg/ajalugu.svg";
 
 function App() {
   const [howFar, setHowFar] = useState("mainMenu");
@@ -35,7 +36,7 @@ function App() {
     {!showHistory && (
       <div className="history-icon-container">
         <img className="history-icon"
-          src="/img/icons/ajalugu.png" 
+          src={historyIcon} 
           alt="History Icon"
           height={65} 
           onClick={() => setShowHistory(true)} 
