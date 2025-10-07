@@ -33,32 +33,42 @@ function App() {
   return (
     <div className="mainContainer">
       <div>
-    {!showHistory && (
-      <div className="history-icon-container">
-        <img className="history-icon"
-          src={historyIcon} 
-          alt="History Icon"
-          height={65} 
-          onClick={() => setShowHistory(true)} 
-        />
-      </div>
-    )}
+        {!showHistory && (
+          <div className="history-icon-container">
+            <img
+              className="history-icon"
+              src={historyIcon}
+              alt="History Icon"
+              height={65}
+              onClick={() => setShowHistory(true)}
+            />
+          </div>
+        )}
 
-    {showHistory && createPortal(
-      <History onClose={() => setShowHistory(false)} />,
-      document.body
-    )}
-  </div>
+        {showHistory &&
+          createPortal(
+            <History onClose={() => setShowHistory(false)} />,
+            document.body
+          )}
+      </div>
       {howFar === "mainMenu" && <MainMenu startQuiz={startQuiz} />}
 
       {howFar === "questions" && (
         <>
           <ProgressBar progress={progress} />
-          <Table data={data} onComplete={completeQuiz} onProgress={setProgress} />
+          <Table
+            data={data}
+            onComplete={completeQuiz}
+            onProgress={setProgress}
+            progress={progress}
+            onHistoryClick={() => setShowHistory(true)}
+          />
         </>
-)}
+      )}
 
-      {howFar === "results" && <Result onComplete={resetQuiz} winner={winner} />}
+      {howFar === "results" && (
+        <Result onComplete={resetQuiz} winner={winner} />
+      )}
     </div>
   );
 }

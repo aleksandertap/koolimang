@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../Button";
 import LoadingScreen from "../LoadingScreen";
 import ProgressBar from "./ProgressBar";
+import Header from "./Header";
 
 const Result = ({ onComplete, winner }) => {
   const [loading, setLoading] = useState(true);
