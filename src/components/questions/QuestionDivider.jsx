@@ -1,5 +1,4 @@
 import React from 'react'
-import "./QuestionDivider.css"
 
 const QuestionDivider = () => {
   return (
