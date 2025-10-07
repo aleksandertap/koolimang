@@ -16,6 +16,7 @@ function App() {
   const [winner, setWinner] = useState(null);
   const [progress, setProgress] = useState(0);
   const [showHistory, setShowHistory] = useState(false);
+  const [activeItems, setActiveItems] = useState(data);
 
   const startQuiz = () => {
     setHowFar("questions");
@@ -72,8 +73,13 @@ function App() {
       {howFar === "questions" && (
         <>
           <ProgressBar progress={progress} />
-          <Table data={data} onComplete={completeQuiz} onProgress={setProgress} />
-          <IconsBar />
+          <Table
+            data={data}
+            onComplete={completeQuiz}
+            onProgress={setProgress}
+            onActiveChange={setActiveItems}
+          />
+          <IconsBar data={data} activeItems={activeItems} />
         </>
 )}
 
