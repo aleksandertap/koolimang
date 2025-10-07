@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-.table {
+.questions .table {
     position: fixed;
     top: 150px;
     bottom: 12vh;
@@ -29,11 +29,11 @@
   padding: 0;
   width: 100%;
 }
-h1{
+.questions h1{
     position: fixed;
     top: 40px;
 }
-.mainContainer .progress-bar-container {
+.questions .progress-bar-container {
     position: fixed;
     top: 90px;
     left: 24px;

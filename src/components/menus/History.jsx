@@ -43,7 +43,11 @@ const History = ({ onClose }) => {
             <p>Ei ole veel tulemusi.</p>
           ) : (
             history.map((item, idx) => {
-              let iconKey = item.iconName === "Ärikool" ? "Arikool" : item.iconName;
+              let iconKey = item.iconName;
+              
+              if (iconKey === "Ärikool") iconKey = "Arikool";
+              if (iconKey === "IT-Kool") iconKey = "Itkool";
+
               const Icon = iconMap[iconKey];
 
               return (

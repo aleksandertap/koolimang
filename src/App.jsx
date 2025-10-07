@@ -50,42 +50,42 @@ function App() {
   };
 
   return (
-    <div className="mainContainer">
-      <div>
-    {!showHistory && (
-      <div className="history-icon-container">
-        <img className="history-icon"
-          src={historyIcon} 
-          alt="History Icon"
-          height={65} 
-          onClick={() => setShowHistory(true)} 
-        />
-      </div>
-    )}
-
-    {showHistory && createPortal(
-      <History onClose={() => setShowHistory(false)} />,
-      document.body
-    )}
-  </div>
-      {howFar === "mainMenu" && <MainMenu startQuiz={startQuiz} />}
-
-      {howFar === "questions" && (
-        <>
-          <ProgressBar progress={progress} />
-          <Table
-            data={data}
-            onComplete={completeQuiz}
-            onProgress={setProgress}
-            onActiveChange={setActiveItems}
+  <div className={`mainContainer ${howFar}`}>
+    <div>
+      {!showHistory && (
+        <div className="history-icon-container">
+          <img
+            className="history-icon"
+            src={historyIcon}
+            alt="History Icon"
+            height={65}
+            onClick={() => setShowHistory(true)}
           />
-          <IconsBar data={data} activeItems={activeItems} />
-        </>
-)}
+        </div>
+      )}
 
-      {howFar === "results" && <Result onComplete={resetQuiz} winner={winner} />}
+      {showHistory &&
+        createPortal(<History onClose={() => setShowHistory(false)} />, document.body)}
     </div>
-  );
+
+    {howFar === "mainMenu" && <MainMenu startQuiz={startQuiz} />}
+
+    {howFar === "questions" && (
+      <>
+        <ProgressBar progress={progress} />
+        <Table
+          data={data}
+          onComplete={completeQuiz}
+          onProgress={setProgress}
+          onActiveChange={setActiveItems}
+        />
+        <IconsBar data={data} activeItems={activeItems} />
+      </>
+    )}
+
+    {howFar === "results" && <Result onComplete={resetQuiz} winner={winner} />}
+  </div>
+);
 }
 
 export default App;
