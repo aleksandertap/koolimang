@@ -41,7 +41,7 @@ function App() {
   const entry = {
     id: finalWinner.id,
     name: finalWinner.name,
-    icon: finalWinner.icon,
+    iconName: finalWinner.name.replace(/\s/g, ""),
     date,
   };
 

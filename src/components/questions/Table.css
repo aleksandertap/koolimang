@@ -108,11 +108,7 @@ h1{
 
   .containerDivider hr {
     width: 3px;
-    flex: 1;
     height: 220px;
-    background: #000;
-    border: none;
-    border-radius: 3px;
   }
     .cardContainer button,
     .cardContainer Button {
