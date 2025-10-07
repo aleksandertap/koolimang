@@ -1,9 +1,17 @@
+import { ReactComponent as Arikool } from "../assets/img/svg/arikool-circle.svg";
+import { ReactComponent as Ehituskool } from "../assets/img/svg/ehituskool-circle.svg";
+import { ReactComponent as Ilukool } from "../assets/img/svg/ilukool-circle.svg";
+import { ReactComponent as Itkool } from "../assets/img/svg/itkool-circle.svg";
+import { ReactComponent as Tehnikakool } from "../assets/img/svg/tehnikakool-circle.svg";
+import { ReactComponent as Toidukool } from "../assets/img/svg/toidukool-circle.svg";
+import { ReactComponent as Turismikool } from "../assets/img/svg/turismikool-circle.svg";
+
 const data = [
   {
     id: 1,
     name: "Ehituskool",
     description: "Sinu tulevik on ehituskoolis! Kui armastad praktilist tööd, täpsust ja kätega loomist, sobib see Sulle ideaalselt. ",
-    icon: "/img/icons/ehituskool.png",
+    icon: Ehituskool,
     picture: "/img/pictures/ehituskool.png",
     suggestion: [
       "Olen kannatlik, täpne ja naudin, kui saan oma kätega midagi nullist üles ehitada.", 
@@ -15,7 +23,7 @@ const data = [
     id: 2,
     name: "IT-Kool",
     description: "Sinu tulevik on IT-koolis! Kui armastad loogikat, probleemide lahendamist ja uue tehnoloogia loomist, sobib see Sulle ideaalselt. ",
-    icon: "/img/icons/itkool.png",
+    icon: Itkool,
     picture: "/img/pictures/itkool.png",
     suggestion: [
       "Olen analüütiline, uudishimulik ja naudin, kui saan keerulisi probleeme lahendada.",
@@ -27,7 +35,7 @@ const data = [
     id: 3,
     name: "Toidukool",
     description: "Sinu tulevik on toiduvaldkonnas! Kui armastad loomingulist, head maitset ja meeskonnatööd, sobib see Sulle ideaalselt. ",
-    icon: "/img/icons/toidukool.png",
+    icon: Toidukool,
     picture: "/img/pictures/toidukool.png",
     suggestion: [
       "Olen hoolikas ja tähelepanelik, mulle meeldib pakkuda inimestele meeldivaid elamusi läbi toidu ja teeninduse.",
@@ -39,7 +47,7 @@ const data = [
     id: 4,
     name: "Ärikool",
     description: "Sinu tulevik on ärikoolis! Kui armastad planeerimist, suhtlemist ja tulemuste saavutamist, sobib see Sulle ideaalselt. ",
-    icon: "/img/icons/arikool.png",
+    icon: Arikool,
     picture: "/img/pictures/arikool.png",
     suggestion: [
       "Olen organiseeritud, süsteemne ja naudin, kui saan protsesse sujuvamaks muuta.",
@@ -51,7 +59,7 @@ const data = [
     id: 5,
     name: "Ilukool",
     description: "Sinu tulevik on iluvaldkonnas! Kui armastad ilu, täpsust ja inimestega suhtlemist, sobib see Sulle ideaalselt. ",
-    icon: "/img/icons/ilukool.png",
+    icon: Ilukool,
     picture: "/img/pictures/ilukool.png",
     suggestion: [
       "Olen loominguline ja väärtustan ilu ning täpsust väikestes detailides.",
@@ -63,7 +71,7 @@ const data = [
     id: 6,
     name: "Tehnikakool",
     description: "Sinu tulevik on tehnikakoolis! Kui armastad mehhaanikat, täpsust ja kätega ehitamist/parandamist, sobib see Sulle ideaalselt. ",
-    icon: "/img/icons/tehnikakool.png",
+    icon: Tehnikakool,
     picture: "/img/pictures/tehnikakool.png",
     suggestion: [
       "Olen loogilise mõtlemisega, täpne ja praktiline ning naudin olukordi, kus saan lahendada tehnilisi ülesandeid ja näidata enda käelist osavust.",
@@ -76,7 +84,7 @@ const data = [
     id: 7,
     name: "Turismikool",
     description: "Sinu tulevik on turismikoolis! Kui armastad inimestega suhtlemist, lahenduste leidmist ja korra loomist, sobib see Sulle ideaalselt.",
-    icon: "/img/icons/turismikool.png",
+    icon: Turismikool,
     picture: "/img/pictures/turismikool.png",
     suggestion: [
       "Olen avatud ja rõõmsameelne, naudin suhtlemist väga erinevate inimestega.",

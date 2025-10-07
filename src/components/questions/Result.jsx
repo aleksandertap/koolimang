@@ -28,7 +28,7 @@ const Result = ({ onComplete, winner }) => {
         <div className="result-content">
           <img src={winner.picture} alt={winner.picture} className="result-image" />
           <h1>{winner.name}</h1>
-          <img src={winner.icon} alt={winner.icon} className="result-icon" />
+          {winner.icon && <winner.icon className="result-icon" />}
           <p>
             {winner.description}{" "}
             {winner.id === 8 ? (

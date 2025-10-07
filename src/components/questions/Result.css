@@ -39,3 +39,8 @@
     font-size: 16px;
     font-weight: 600;
 }
+.result-icon {
+  width: 80px;   /* or whatever fits your layout */
+  height: auto;   /* keeps the aspect ratio */
+  display: block; /* removes inline spacing */
+}
