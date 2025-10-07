@@ -83,10 +83,8 @@
 
 
 @media (min-width: 1024px) {
-  .mainContainer{
-    padding: 0 100px 0 100px;
-  }
-  .table {
+
+  .questions .table {
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -96,6 +94,43 @@
   .cardContainer{
     flex:1;
   }
+  .questions h1{
+    position: fixed;
+    left: 100px;
+  }
+  .questions .progress-bar-container {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25%;
+    height: 48px;
+  }
+  .mainContainer .history-icon {
+    position: fixed;
+    top: 40px;
+    right: 160px;
+    width: 48px;
+    height: 48px;
+  }
+
+
+.questions .table {
+    top:0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+    align-items: stretch;
+    width: calc(100% - 320px); /* 100px left + 24px right */
+    margin-left: 160px;
+    margin-right: 160px;
+    box-sizing: border-box;
+    height: 600px;
+    max-height: 50vh;
+    align-items: center; 
+    padding: 0;
+}
   .containerDivider {
     flex:0;
     flex-direction: column;
@@ -114,4 +149,32 @@
     .cardContainer Button {
         height: 240px;
 }
+}
+@media (min-width: 1200px) {
+    .questions h1{
+        position: fixed;
+        left: 125px;
+    }
+    .questions .progress-bar-container {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    height: 48px;
+  }
+}
+@media (min-width: 1600px) {
+    .questions h1{
+        position: fixed;
+        left: 160px;
+    }
+    .questions .progress-bar-container {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    height: 48px;
+  }
 }
