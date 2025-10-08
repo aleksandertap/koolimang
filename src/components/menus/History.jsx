@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./History.css";
+import { getData } from "../../data/data";
 
 import { ReactComponent as Arikool } from "../../assets/img/svg/arikool-circle.svg";
 import { ReactComponent as Ehituskool } from "../../assets/img/svg/ehituskool-circle.svg";
@@ -19,13 +20,21 @@ const iconMap = {
   Turismikool,
 };
 
-const History = ({ onClose }) => {
+const History = ({ onClose, onSelectResult }) => {
   const [history, setHistory] = useState([]);
 
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem("history")) || [];
     setHistory(saved);
   }, []);
+  const handleItemClick = (historyItem) => {
+    const fullData = getData();
+    const selectedData = fullData.find((item) => item.id === historyItem.id);
+
+    if (selectedData) {
+      onSelectResult(selectedData);
+    }
+  };
 
   return (
     <div className="overlay">
@@ -44,14 +53,14 @@ const History = ({ onClose }) => {
           ) : (
             history.map((item, idx) => {
               let iconKey = item.iconName;
-              
+
               if (iconKey === "Ärikool") iconKey = "Arikool";
               if (iconKey === "IT-Kool") iconKey = "Itkool";
 
               const Icon = iconMap[iconKey];
 
               return (
-                <div key={idx} className="historyItem">
+                <div key={idx} className="historyItem" onClick={() => handleItemClick(item)}>
                   <span className="historyDate">{item.date}</span>
                   <div className="name-icon">
                     <span className="historyName">{item.name}</span>

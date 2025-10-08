@@ -66,7 +66,15 @@ function App() {
 
         {showHistory &&
           createPortal(
-            <History onClose={() => setShowHistory(false)} />,
+            <History
+              onClose={() => setShowHistory(false)}
+              onSelectResult={(data) => {
+                setShowHistory(false);
+                setHowFar("results");
+                setWinner(data);
+                setProgress(0);
+              }}
+            />,
             document.body
           )}
       </div>
