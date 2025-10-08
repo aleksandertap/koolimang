@@ -14,7 +14,6 @@ const shuffleData = (data) => {
 };
 
 const Table = ({ data, onComplete, onProgress, onActiveChange }) => {
-const Table = ({ data, onComplete, onProgress, progress, onHistoryClick }) => {
   const [roundData, setRoundData] = useState(shuffleData(data));
   const [nextRound, setNextRound] = useState([]);
   const [suggestionIndex, setSuggestionIndex] = useState(0);

@@ -82,13 +82,6 @@ function App() {
             onActiveChange={setActiveItems}
           />
           <IconsBar data={data} activeItems={activeItems} />
-          <Table
-            data={data}
-            onComplete={completeQuiz}
-            onProgress={setProgress}
-            progress={progress}
-            onHistoryClick={() => setShowHistory(true)}
-          />
         </>
       )}
 
