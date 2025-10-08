@@ -41,7 +41,7 @@ function App() {
     const entry = {
       id: finalWinner.id,
       name: finalWinner.name,
-      icon: finalWinner.icon,
+      iconName: finalWinner.name.replace(/\s/g, ""),
       date,
     };
 
@@ -50,7 +50,7 @@ function App() {
   };
 
   return (
-    <div className="mainContainer">
+    <div className={`mainContainer ${howFar}`}>
       <div>
         {!showHistory && (
           <div className="history-icon-container">
@@ -70,6 +70,7 @@ function App() {
             document.body
           )}
       </div>
+
       {howFar === "mainMenu" && <MainMenu startQuiz={startQuiz} />}
 
       {howFar === "questions" && (

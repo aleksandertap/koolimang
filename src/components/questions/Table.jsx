@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import QuestionCard from "./QuestionCard";
 import QuestionDivider from "./QuestionDivider";
-import IconsBar from "../IconsBar";
 import "./Table.css";
 
 const shuffleData = (data) => {
