@@ -1,0 +1,19 @@
+.icons-container {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.icons-container svg {
+  flex: 1 1 0;
+  max-width: 80px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}

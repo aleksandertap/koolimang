@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import QuestionCard from "./QuestionCard";
 import QuestionDivider from "./QuestionDivider";
+import IconsBar from "../IconsBar";
 import "./Table.css";
 
 const shuffleData = (data) => {
@@ -12,6 +13,7 @@ const shuffleData = (data) => {
   return shuffled;
 };
 
+const Table = ({ data, onComplete, onProgress, onActiveChange }) => {
 const Table = ({ data, onComplete, onProgress, progress, onHistoryClick }) => {
   const [roundData, setRoundData] = useState(shuffleData(data));
   const [nextRound, setNextRound] = useState([]);
@@ -49,6 +51,12 @@ const Table = ({ data, onComplete, onProgress, progress, onHistoryClick }) => {
       onProgress(progressValue);
     }
   }, [progressCounter, data, onProgress]);
+
+  useEffect(() => {
+    if (onActiveChange) {
+      onActiveChange([...roundData, ...nextRound]);
+    }
+  }, [roundData, nextRound, onActiveChange]);
 
   //selleta ei lae andmeid sisse
   if (roundData.length < 2) {

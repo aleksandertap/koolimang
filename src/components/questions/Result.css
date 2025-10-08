@@ -1,0 +1,46 @@
+.result-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 160px;
+  gap: 28px;
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.result-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 72px;
+  gap: 14px;
+
+  background: #ffffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  height: 100%;
+  width: 100%;
+}
+.result-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  height: 100%;
+}
+
+.restart-btn{
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+}
+.result-icon {
+  width: 80px;   /* or whatever fits your layout */
+  height: auto;   /* keeps the aspect ratio */
+  display: block; /* removes inline spacing */
+}

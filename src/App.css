@@ -1,24 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 #root {
   margin: 0;
   padding: 0;
-  height: 90vh;
+
 }
 
-.mainContainer{
+* {
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
+}
+
+/* desktop */
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+p {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.pSmall {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.pBold {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.mainContainer {
+  position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;    
-  height: 100%;   
+  align-items: center;
   flex-direction: column;
+  background-color: white;
+  padding: 32px 32px;
+  margin: 0 auto;
+  height: 100%;
 }
-.history-icon-container{
+
+/* mobile */
+@media (min-width: 1024px) {
+  
+}
+
+.history-icon-container {
   position: fixed;
   top: 5%;
   right: 5%;
   cursor: pointer;
   /* bg-c alles siis kui on teada kuhu asi maandub
   background-color: white; */
-  
 }
 /* .history-icon{
   
