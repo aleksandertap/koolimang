@@ -31,61 +31,74 @@ function App() {
     setWinner(finalWinner);
     setHowFar("results");
 
-      // Salvestab localStoragesse 
-  const prev = JSON.parse(localStorage.getItem("history")) || [];
+    // Salvestab localStoragesse
+    const prev = JSON.parse(localStorage.getItem("history")) || [];
 
-  // Format date as dd.mm.yyyy
-  const now = new Date();
-  const date = now.toLocaleDateString("et-EE");
+    // Format date as dd.mm.yyyy
+    const now = new Date();
+    const date = now.toLocaleDateString("et-EE");
 
-  const entry = {
-    id: finalWinner.id,
-    name: finalWinner.name,
-    iconName: finalWinner.name.replace(/\s/g, ""),
-    date,
-  };
+    const entry = {
+      id: finalWinner.id,
+      name: finalWinner.name,
+      iconName: finalWinner.name.replace(/\s/g, ""),
+      date,
+    };
 
-  const updated = [entry, ...prev]; // pea-alaspidi järjekord
-  localStorage.setItem("history", JSON.stringify(updated));
+    const updated = [entry, ...prev]; // pea-alaspidi järjekord
+    localStorage.setItem("history", JSON.stringify(updated));
   };
 
   return (
-  <div className={`mainContainer ${howFar}`}>
-    <div>
-      {!showHistory && (
-        <div className="history-icon-container">
-          <img
-            className="history-icon"
-            src={historyIcon}
-            alt="History Icon"
-            height={65}
-            onClick={() => setShowHistory(true)}
+    <div className={`mainContainer ${howFar}`}>
+      <div>
+        {!showHistory && (
+          <div className="history-icon-container">
+            <img
+              className="history-icon"
+              src={historyIcon}
+              alt="History Icon"
+              height={65}
+              onClick={() => setShowHistory(true)}
+            />
+          </div>
+        )}
+
+        {showHistory &&
+          createPortal(
+            <History
+              onClose={() => setShowHistory(false)}
+              onSelectResult={(data) => {
+                setShowHistory(false);
+                setHowFar("results");
+                setWinner(data);
+                setProgress(0);
+              }}
+            />,
+            document.body
+          )}
+      </div>
+
+      {howFar === "mainMenu" && <MainMenu startQuiz={startQuiz} />}
+
+      {howFar === "questions" && (
+        <>
+          <ProgressBar progress={progress} />
+          <Table
+            data={data}
+            onComplete={completeQuiz}
+            onProgress={setProgress}
+            onActiveChange={setActiveItems}
           />
-        </div>
+          <IconsBar data={data} activeItems={activeItems} />
+        </>
       )}
 
-      {showHistory &&
-        createPortal(<History onClose={() => setShowHistory(false)} />, document.body)}
+      {howFar === "results" && (
+        <Result onComplete={resetQuiz} winner={winner} />
+      )}
     </div>
-
-    {howFar === "mainMenu" && <MainMenu startQuiz={startQuiz} />}
-
-    {howFar === "questions" && (
-      <>
-        <ProgressBar progress={progress} />
-        <Table
-          data={data}
-          onComplete={completeQuiz}
-          onProgress={setProgress}
-          onActiveChange={setActiveItems}
-        />
-        <IconsBar data={data} activeItems={activeItems} />
-      </>
-    )}
-
-    {howFar === "results" && <Result onComplete={resetQuiz} winner={winner} />}
-  </div>
-);
+  );
 }
 
 export default App;
