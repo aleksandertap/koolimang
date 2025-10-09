@@ -33,7 +33,7 @@ const LoadingScreen = () => {
           className="loading-image"
         />
       </div>
-      <p>Vastuse arvutamine...</p>
+      <p>Palun oota ...</p>
     </div>
   );
 };

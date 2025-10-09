@@ -27,7 +27,7 @@ const Result = ({ onComplete, winner }) => {
     Ärikool: "radial-gradient(circle, #EF4144, #FFFFFF)",
     Ehituskool: "radial-gradient(circle, #0DB14B, #FFFFFF)",
     Ilukool: "radial-gradient(circle, #B41E8E, #FFFFFF)",
-    Itkool: "radial-gradient(circle, #20C4F4, #FFFFFF)",
+    "IT-Kool": "radial-gradient(circle, #20C4F4, #FFFFFF)",
     Toidukool: "radial-gradient(circle, #F99D28, #FFFFFF)",
     Turismikool: "radial-gradient(circle, #CADB36, #FFFFFF)",
   };
@@ -44,7 +44,7 @@ const Result = ({ onComplete, winner }) => {
         <div className="result-content">
           <img
             src={winner.picture}
-            alt={winner.picture}
+            alt={winner.name}
             className="result-image"
           />
           <h1>{winner.name}</h1>
