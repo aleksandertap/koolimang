@@ -17,7 +17,6 @@
   border-radius: 50px 50px 50px 50px;
   transition: width 0.3s ease;
   margin-left: 5px;
-  margin-right: 5px;
 }
 .progress-bar-text {
   position: absolute;
@@ -35,14 +34,4 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-}
-
-.progress-bar-container[data-progress="100"] .progress-bar-fill {
- width: 98% !important;
-}
-
-@media(max-width: 1024px) {
-  .progress-bar-container[data-progress="100"] .progress-bar-fill {
- width: 96% !important;
-}
 }

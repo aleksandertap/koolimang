@@ -12,7 +12,9 @@ const ProgressBar = ({ progress }) => {
       >
         <div
           className="progress-bar-fill"
-          style={{ width: `${progress}%` }}
+          style={{
+            width: progress === 100 ? 'calc(100% - 10px)' : `${progress}%`,
+          }}
         ></div>
         <span className="progress-bar-text">{progress}%</span>
       </div>
