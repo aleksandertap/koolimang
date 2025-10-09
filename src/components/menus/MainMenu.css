@@ -24,6 +24,10 @@ html, body, #root {
 }
 
 .hoverBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   color: black;
   border: 2px solid black;
@@ -47,8 +51,12 @@ html, body, #root {
 }
 
 .button {
-  font-size: 1rem;
-  padding: 0.8rem 1.2rem;
+  display: flex;
+  font-size: 16px;
+  height: 48px;
+  width: 180px;
+  align-items: center;
+  justify-content: center;
   border-radius: 8px;
   color: white;
   background-color: black;
