@@ -35,3 +35,14 @@
   transform: translate(-50%, -50%);
   color: #fff;
 }
+
+@media (max-width: 1024px) {
+  .progress-bar-container[data-progress="86"] .progress-bar-fill{
+    width: 82% !important;
+  }
+
+  .progress-bar-container[data-progress="86"] .progress-bar-text {
+  left: 85%;
+}
+}
+
