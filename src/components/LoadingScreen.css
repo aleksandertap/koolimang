@@ -98,10 +98,13 @@
 /* Mobile */
 @media (max-width: 600px) {
   .loading-container h1 {
+    display: none;
     left: 16px;
   }
   .loading-container .progress-bar-container {
+    display: none;
     left: 16px;
     height: 32px;
   }
+
 }
