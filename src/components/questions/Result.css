@@ -59,4 +59,12 @@
     word-break: break-word;
     overflow-wrap: break-word;
   }
+  .restart-btn{
+    white-space: nowrap;
+  }
+  img {
+  max-width: 100%;
+  height: auto;
+  }
+
 }
