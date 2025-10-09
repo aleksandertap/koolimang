@@ -61,9 +61,12 @@
 .historyContainer {
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
   gap: 43px;
   padding: 32px;
+}
+
+.historyList{
+  overflow-y: auto;
 }
 .historyItem {
   display: flex;
