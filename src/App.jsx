@@ -2,7 +2,7 @@ import "./App.css";
 import { getData } from "./data/data";
 import MainMenu from "./components/menus/MainMenu";
 import Table from "./components/questions/Table";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Result from "./components/questions/Result";
 import ProgressBar from "./components/questions/ProgressBar";
 import History from "./components/menus/History";
@@ -17,10 +17,9 @@ function App() {
   const [progress, setProgress] = useState(0);
   const [showHistory, setShowHistory] = useState(false);
   const [activeItems, setActiveItems] = useState(data);
+  const [showHistoryIcon, setShowHistoryIcon] = useState(true);
 
-  const startQuiz = () => {
-    setHowFar("questions");
-  };
+  const startQuiz = () => setHowFar("questions");
 
   const resetQuiz = () => {
     setData(getData());
@@ -31,28 +30,40 @@ function App() {
     setWinner(finalWinner);
     setHowFar("results");
 
-    // Salvestab localStoragesse
+    // Save to localStorage
     const prev = JSON.parse(localStorage.getItem("history")) || [];
-
-    // Format date as dd.mm.yyyy
     const now = new Date();
     const date = now.toLocaleDateString("et-EE");
-
     const entry = {
       id: finalWinner.id,
       name: finalWinner.name,
       iconName: finalWinner.name.replace(/\s/g, ""),
       date,
     };
-
-    const updated = [entry, ...prev]; // pea-alaspidi järjekord
+    const updated = [entry, ...prev];
     localStorage.setItem("history", JSON.stringify(updated));
   };
+
+  
+  useEffect(() => {
+    const isMobile = window.innerWidth <= 768; 
+    if (howFar === "results") {
+      if (isMobile) {
+        setShowHistoryIcon(false);
+        const timer = setTimeout(() => setShowHistoryIcon(true), 2000);
+        return () => clearTimeout(timer);
+      } else {
+        setShowHistoryIcon(true);
+      }
+    } else {
+      setShowHistoryIcon(true);
+    }
+  }, [howFar]);
 
   return (
     <div className={`mainContainer ${howFar}`}>
       <div>
-        {!showHistory && (
+        {!showHistory && showHistoryIcon && (
           <div className="history-icon-container">
             <img
               className="history-icon"
