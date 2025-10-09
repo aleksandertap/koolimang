@@ -22,7 +22,8 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   height: auto; 
-  width: 100%;
+  width: 80%;
+  text-align: center;
 }
 
 .result-content {
