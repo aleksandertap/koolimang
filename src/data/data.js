@@ -10,7 +10,7 @@ const data = [
   {
     id: 1,
     name: "Ehituskool",
-    description: "Sinu tulevik on ehituskoolis! Kui armastad praktilist tööd, täpsust ja kätega loomist, sobib see Sulle ideaalselt. ",
+    description: "Sinu tulevik on ehituskoolis! Kui armastad praktilist tööd, täpsust ja kätega loomist, sobib see Sulle ideaalselt.",
     icon: Ehituskool,
     picture: "/img/pictures/ehituskool.png",
     suggestion: [
@@ -22,7 +22,7 @@ const data = [
   {
     id: 2,
     name: "IT-Kool",
-    description: "Sinu tulevik on IT-koolis! Kui armastad loogikat, probleemide lahendamist ja uue tehnoloogia loomist, sobib see Sulle ideaalselt. ",
+    description: "Sinu tulevik on IT-koolis! Kui armastad loogikat, probleemide lahendamist ja uuete tehnoloogiate loomist, sobib see Sulle ideaalselt.",
     icon: Itkool,
     picture: "/img/pictures/itkool.png",
     suggestion: [
@@ -34,7 +34,7 @@ const data = [
   {
     id: 3,
     name: "Toidukool",
-    description: "Sinu tulevik on toiduvaldkonnas! Kui armastad loomingulist, head maitset ja meeskonnatööd, sobib see Sulle ideaalselt. ",
+    description: "Sinu tulevik on toiduvaldkonnas! Kui armastad loomingulist, head maitset ja meeskonnatööd, sobib see Sulle ideaalselt.",
     icon: Toidukool,
     picture: "/img/pictures/toidukool.png",
     suggestion: [
@@ -46,7 +46,7 @@ const data = [
   {
     id: 4,
     name: "Ärikool",
-    description: "Sinu tulevik on ärikoolis! Kui armastad planeerimist, suhtlemist ja tulemuste saavutamist, sobib see Sulle ideaalselt. ",
+    description: "Sinu tulevik on ärikoolis! Kui armastad planeerimist, suhtlemist ja tulemuste saavutamist, sobib see Sulle ideaalselt.",
     icon: Arikool,
     picture: "/img/pictures/arikool.png",
     suggestion: [
@@ -58,7 +58,7 @@ const data = [
   {
     id: 5,
     name: "Ilukool",
-    description: "Sinu tulevik on iluvaldkonnas! Kui armastad ilu, täpsust ja inimestega suhtlemist, sobib see Sulle ideaalselt. ",
+    description: "Sinu tulevik on iluvaldkonnas! Kui armastad ilu, täpsust ja inimestega suhtlemist, sobib see Sulle ideaalselt.",
     icon: Ilukool,
     picture: "/img/pictures/ilukool.png",
     suggestion: [
@@ -70,7 +70,7 @@ const data = [
   {
     id: 6,
     name: "Tehnikakool",
-    description: "Sinu tulevik on tehnikakoolis! Kui armastad mehhaanikat, täpsust ja kätega ehitamist/parandamist, sobib see Sulle ideaalselt. ",
+    description: "Sinu tulevik on tehnikakoolis! Kui armastad mehhaanikat, täpsust ja kätega ehitamist/parandamist, sobib see Sulle ideaalselt.",
     icon: Tehnikakool,
     picture: "/img/pictures/tehnikakool.png",
     suggestion: [
