@@ -1,6 +1,7 @@
 button{
     border-radius: 8px;
     border-width: 1px;
-    padding: 10px 14px;
+    padding: 10px 20px !important;
     cursor: pointer;
+    font-size: 20px;
 }
